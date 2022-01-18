@@ -1,0 +1,19 @@
+{
+  "name": "react-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jffelix/React-Calculator.git"
+  },
+  "author": "Jean-Luc Felix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jffelix/React-Calculator/issues"
+  },
+  "homepage": "https://github.com/jffelix/React-Calculator#readme"
+}
