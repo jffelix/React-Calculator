@@ -13,7 +13,7 @@ const App = () => {
         try {
             const fullList = await axios.get("/title");
             setMainTitle(fullList.data);
-
+            
         } catch(err) {
             console.log("Error received during Axios GET request.", err);
         }
