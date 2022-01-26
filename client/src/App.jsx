@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const App = () => {
 
+    useEffect(() => {
+        getTitle();
+    }, []);    
+
     const [ mainTitle, setMainTitle ] = useState("");
 
     const getTitle = () => {
-        
+        axios.get("/title")
+        .then(response => {
+            console.log("response.data: ", response.data);
+        })
+        .catch(err => {
+            console.log("Error received during Axios GET request.", err);
+        })
     }
 
     return (
@@ -17,4 +27,4 @@ const App = () => {
 
 }
 
-export default App
+export default App;
