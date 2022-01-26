@@ -9,14 +9,14 @@ const App = () => {
 
     const [ mainTitle, setMainTitle ] = useState("");
 
-    const getTitle = () => {
-        axios.get("/title")
-        .then(response => {
-            setMainTitle(response.data);
-        })
-        .catch(err => {
+    const getTitle = async () => {
+        try {
+            const fullList = await axios.get("/title");
+            setMainTitle(fullList.data);
+
+        } catch(err) {
             console.log("Error received during Axios GET request.", err);
-        })
+        }
     }
 
     return (
