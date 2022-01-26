@@ -12,7 +12,7 @@ const App = () => {
     const getTitle = () => {
         axios.get("/title")
         .then(response => {
-            console.log("response.data: ", response.data);
+            setMainTitle(response.data);
         })
         .catch(err => {
             console.log("Error received during Axios GET request.", err);
@@ -21,7 +21,7 @@ const App = () => {
 
     return (
         <div>
-            <h1>Hello from App Component!</h1>
+            <h1>{mainTitle}</h1>
         </div>
     )
 
