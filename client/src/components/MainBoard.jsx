@@ -10,31 +10,34 @@ import InputScreen from "./InputScreen.jsx";
 const MainBoard = () => {
 
     const [ screenView, setScreenView ] = useState("");
+    const [ operatorQueue, setOperatorQueue ] = useState(false);
 
     const clickButton = (e) => {
         const integerInput = e.target.innerHTML;
 
         // if clicked button is an operator
         if (integerInput === "/" || integerInput === "*" || integerInput === "-" || integerInput === "+") {
-            setScreenView(screenView + " " + integerInput + " ");
-            
-        // if clicked button is NOT an operator
-        } else {
-            setScreenView(screenView + integerInput);
+            if (!operatorQueue) {
+                setOperatorQueue(true);
+            } else {
+                clickEquals();
+                setOperatorQueue(false);
+            }
+            console.log('operatorQueue: ', operatorQueue);
         }
+        
+        setScreenView(screenView + integerInput);
     }
 
     const clickEquals = () => {
-        // create variable for string
-        // split string by whitespace
-        // iterate over split string
-          // if current value is not an operator
-            // convert to number
-        
+
         const fullInput = screenView;
-        const splitInput = fullInput.split(/\s/g);
-        const result = [];
-        console.log('splitInput: ', splitInput);
+        // const splitInput = fullInput.split(/\s/g);
+        const splitInput = fullInput.split("");
+        const result = eval(screenView);
+        // console.log('splitInput: ', splitInput);
+
+        setScreenView(result);
     }
 
     // everything on screenView will be a string at first
