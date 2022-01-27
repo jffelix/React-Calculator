@@ -11,10 +11,14 @@ const MainBoard = () => {
 
     const [ screenView, setScreenView ] = useState("");
 
-    const clickInteger = (e) => {
+    const clickButton = (e) => {
         const integerInput = e.target.innerHTML;
         setScreenView(screenView + integerInput);
     }
+
+    // everything on screenView will be a string at first
+    // when you press equal
+      // use conditionals to convert string numbers into numbers
 
     return (
         <div>
@@ -22,7 +26,7 @@ const MainBoard = () => {
                 <InputScreen screenInput={screenView} />
             </div>
             <div className="numRows">
-                <NumRowOne clickInteger={clickInteger} />
+                <NumRowOne clickButton={clickButton} />
                 <NumRowTwo />
                 <NumRowThree />
                 <NumRowFour />

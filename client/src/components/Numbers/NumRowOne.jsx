@@ -4,7 +4,7 @@ const NumRowOne = (props) => {
 
     return (
         <div>
-            <div className="numOne" onClick={props.clickInteger} value={1}>
+            <div className="numOne" onClick={props.clickButton}>
                 <span>1</span>
             </div>
             <div className="numTwo">
