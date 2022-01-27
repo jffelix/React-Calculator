@@ -9,6 +9,7 @@ import InputScreen from "./InputScreen.jsx";
 
 const MainBoard = () => {
 
+    const [ inputTest, setInputTest ] = useState("");
     const [ screenView, setScreenView ] = useState("");
     const [ operatorQueue, setOperatorQueue ] = useState(false);
 
@@ -17,16 +18,13 @@ const MainBoard = () => {
 
         // if clicked button is an operator
         if (integerInput === "/" || integerInput === "*" || integerInput === "-" || integerInput === "+") {
-            if (!operatorQueue) {
-                setOperatorQueue(true);
-            } else {
-                clickEquals();
-                setOperatorQueue(false);
-            }
             console.log('operatorQueue: ', operatorQueue);
+
+        } else {
+            setScreenView(screenView + integerInput);
         }
         
-        setScreenView(screenView + integerInput);
+        setInputTest(inputTest + integerInput)
     }
 
     const clickEquals = () => {
@@ -34,9 +32,10 @@ const MainBoard = () => {
         const fullInput = screenView;
         // const splitInput = fullInput.split(/\s/g);
         const splitInput = fullInput.split("");
-        const result = eval(screenView);
+        const result = eval(inputTest);
         // console.log('splitInput: ', splitInput);
 
+        setInputTest(result);
         setScreenView(result);
     }
 
@@ -46,6 +45,10 @@ const MainBoard = () => {
 
     return (
         <div>
+            <div>
+                <h3>Debug Input</h3>
+                <p>{inputTest}</p>    
+            </div>
             <div>
                 <InputScreen screenInput={screenView} />
             </div>
