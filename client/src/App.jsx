@@ -9,7 +9,6 @@ const App = () => {
     }, []);    
 
     const [ mainTitle, setMainTitle ] = useState("");
-    const [ screenView, setScreenView ] = useState("");
 
     const getTitle = async () => {
         try {
