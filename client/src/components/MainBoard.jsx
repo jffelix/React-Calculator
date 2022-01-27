@@ -9,8 +9,11 @@ import InputScreen from "./InputScreen.jsx";
 
 const MainBoard = () => {
 
+    // debug visual for calculations behind the scenes
     const [ debugInput, setDebugInput ] = useState("");
+    // visual for users
     const [ screenView, setScreenView ] = useState("");
+    
     const [ operatorQueue, setOperatorQueue ] = useState(false);
 
     const clickButton = (e) => {
@@ -18,7 +21,13 @@ const MainBoard = () => {
 
         // if clicked button is an operator
         if (integerInput === "/" || integerInput === "*" || integerInput === "-" || integerInput === "+") {
-            console.log('operatorQueue: ', operatorQueue);
+
+            // if another operator is pressed
+              // replace previous operator with current one
+            // if another number is pressed
+              // invoke clickEquals
+
+            console.log("operator clicked");
 
         } else {
             setScreenView(screenView + integerInput);
@@ -38,10 +47,6 @@ const MainBoard = () => {
         setDebugInput(result);
         setScreenView(result);
     }
-
-    // everything on screenView will be a string at first
-    // when you press equal
-      // use conditionals to convert string numbers into numbers
 
     return (
         <div>
