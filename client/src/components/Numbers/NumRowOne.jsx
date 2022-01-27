@@ -1,10 +1,10 @@
 import React from "react";
 
-const NumRowOne = () => {
+const NumRowOne = (props) => {
 
     return (
         <div>
-            <div className="numOne">
+            <div className="numOne" onClick={props.clickInteger} value={1}>
                 <span>1</span>
             </div>
             <div className="numTwo">

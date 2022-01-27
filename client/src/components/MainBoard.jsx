@@ -11,13 +11,18 @@ const MainBoard = () => {
 
     const [ screenView, setScreenView ] = useState("");
 
+    const clickInteger = (e) => {
+        const integerInput = e.target.innerHTML;
+        setScreenView(screenView + integerInput);
+    }
+
     return (
         <div>
             <div>
                 <InputScreen screenInput={screenView} />
             </div>
             <div className="numRows">
-                <NumRowOne />
+                <NumRowOne clickInteger={clickInteger} />
                 <NumRowTwo />
                 <NumRowThree />
                 <NumRowFour />

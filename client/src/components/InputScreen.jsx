@@ -4,7 +4,9 @@ const InputScreen = (props) => {
 
     return (
         <div>
-            <input value={props.screenInput} />
+            <p>Screen Below</p>
+            <span>{props.screenInput}</span>
+            <p>Screen Above</p>
         </div>
     )
 
