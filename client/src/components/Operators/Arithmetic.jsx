@@ -21,3 +21,5 @@ const Arithmetic = () => {
         </div>
     )
 }
+
+export default Arithmetic;

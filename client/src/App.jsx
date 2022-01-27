@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import MainBoard from "./components/MainBoard.jsx";
 
 const App = () => {
 
@@ -8,12 +9,13 @@ const App = () => {
     }, []);    
 
     const [ mainTitle, setMainTitle ] = useState("");
+    const [ screenView, setScreenView ] = useState("");
 
     const getTitle = async () => {
         try {
             const fullList = await axios.get("/title");
             setMainTitle(fullList.data);
-            
+
         } catch(err) {
             console.log("Error received during Axios GET request.", err);
         }
@@ -22,6 +24,7 @@ const App = () => {
     return (
         <div>
             <h1>{mainTitle}</h1>
+            <MainBoard />
         </div>
     )
 
