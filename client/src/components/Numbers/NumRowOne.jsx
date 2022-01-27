@@ -3,7 +3,17 @@ import React from "react";
 const NumRowOne = () => {
 
     return (
-        <div>Hello from NumRowOne!</div>
+        <div>
+            <div className="numOne">
+                <span>1</span>
+            </div>
+            <div className="numTwo">
+                <span>2</span>
+            </div>
+            <div className="numThree">
+                <span>3</span>
+            </div>
+        </div>
     )
 
 }
