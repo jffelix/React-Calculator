@@ -1,6 +1,6 @@
 import React from "react";
 
-const NonInteger = () => {
+const NonInteger = (props) => {
 
     return (
         <div>

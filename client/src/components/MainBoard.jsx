@@ -13,7 +13,28 @@ const MainBoard = () => {
 
     const clickButton = (e) => {
         const integerInput = e.target.innerHTML;
-        setScreenView(screenView + integerInput);
+
+        // if clicked button is an operator
+        if (integerInput === "/" || integerInput === "*" || integerInput === "-" || integerInput === "+") {
+            setScreenView(screenView + " " + integerInput + " ");
+            
+        // if clicked button is NOT an operator
+        } else {
+            setScreenView(screenView + integerInput);
+        }
+    }
+
+    const clickEquals = () => {
+        // create variable for string
+        // split string by whitespace
+        // iterate over split string
+          // if current value is not an operator
+            // convert to number
+        
+        const fullInput = screenView;
+        const splitInput = fullInput.split(/\s/g);
+        const result = [];
+        console.log('splitInput: ', splitInput);
     }
 
     // everything on screenView will be a string at first
@@ -32,7 +53,9 @@ const MainBoard = () => {
                 <NumRowFour clickButton={clickButton} />
             </div>
             <div className="operatorRows">
-                <Arithmetic clickButton={clickButton} />
+                <Arithmetic 
+                clickButton={clickButton}
+                clickEquals={clickEquals} />
                 <NonInteger clickButton={clickButton} />
             </div>
         </div>

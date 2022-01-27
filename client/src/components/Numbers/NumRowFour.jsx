@@ -4,11 +4,11 @@ const NumRowFour = (props) => {
 
     return (
         <div>
-            <div className="numZero" onClick={props.clickButton}>
-                <span>0</span>
+            <div className="numZero">
+                <span onClick={props.clickButton}>0</span>
             </div>
-            <div className="decimal" onClick={props.clickButton}>
-                <span>.</span>
+            <div className="decimal">
+                <span onClick={props.clickButton}>.</span>
             </div>
         </div>
     )

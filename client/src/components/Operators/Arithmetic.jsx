@@ -1,21 +1,24 @@
 import React from "react";
 
-const Arithmetic = () => {
+const Arithmetic = (props) => {
+
+    // equals will need a different onClick function
+
     return (
         <div>
-            <div className="divide">
+            <div className="divide" onClick={props.clickButton}>
                 <span>/</span>
             </div>
-            <div className="multiply">
-                <span>X</span>
+            <div className="multiply" onClick={props.clickButton}>
+                <span>*</span>
             </div>
-            <div className="subtract">
+            <div className="subtract" onClick={props.clickButton}>
                 <span>-</span>
             </div>
-            <div className="addition">
+            <div className="addition" onClick={props.clickButton}>
                 <span>+</span>
             </div>
-            <div className="equals">
+            <div className="equals" onClick={props.clickEquals}>
                 <span>=</span>
             </div>
         </div>
