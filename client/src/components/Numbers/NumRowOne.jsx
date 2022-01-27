@@ -7,10 +7,10 @@ const NumRowOne = (props) => {
             <div className="numOne" onClick={props.clickButton}>
                 <span>1</span>
             </div>
-            <div className="numTwo">
+            <div className="numTwo" onClick={props.clickButton}>
                 <span>2</span>
             </div>
-            <div className="numThree">
+            <div className="numThree" onClick={props.clickButton}>
                 <span>3</span>
             </div>
         </div>

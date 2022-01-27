@@ -1,16 +1,16 @@
 import React from "react";
 
-const NumRowThree = () => {
+const NumRowThree = (props) => {
 
     return (
         <div>
-            <div className="numSeven">
+            <div className="numSeven" onClick={props.clickButton}>
                 <span>7</span>
             </div>
-            <div className="numEight">
+            <div className="numEight" onClick={props.clickButton}>
                 <span>8</span>
             </div>
-            <div className="numNine">
+            <div className="numNine" onClick={props.clickButton}>
                 <span>9</span>
             </div>
         </div>

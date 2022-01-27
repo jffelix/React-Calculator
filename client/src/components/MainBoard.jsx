@@ -27,13 +27,13 @@ const MainBoard = () => {
             </div>
             <div className="numRows">
                 <NumRowOne clickButton={clickButton} />
-                <NumRowTwo />
-                <NumRowThree />
-                <NumRowFour />
+                <NumRowTwo clickButton={clickButton} />
+                <NumRowThree clickButton={clickButton} />
+                <NumRowFour clickButton={clickButton} />
             </div>
             <div className="operatorRows">
-                <Arithmetic />
-                <NonInteger />
+                <Arithmetic clickButton={clickButton} />
+                <NonInteger clickButton={clickButton} />
             </div>
         </div>
     )
