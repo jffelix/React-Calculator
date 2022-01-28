@@ -28,6 +28,7 @@ body {
     padding: 20px;
     margin-bottom: 4px;
     border-style: solid;
+    border-width: thin;
     font-size: 42px;
     text-align: right;
     color: white;

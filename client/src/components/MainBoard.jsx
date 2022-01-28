@@ -158,7 +158,7 @@ const MainBoard = () => {
                 </div>
             </div>
             <div className="debugInput" onClick={toggleDebugView}>
-                <h3>Debug Input (click to show)</h3>
+                <h3>Debug View (click to show)</h3>
                 {
                     debugShow ? <p>{debugInput}</p> : null   
                 }
