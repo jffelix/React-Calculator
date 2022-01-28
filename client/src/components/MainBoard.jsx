@@ -8,12 +8,11 @@ import NonInteger from "./Operators/NonInteger.jsx";
 import InputScreen from "./InputScreen.jsx";
 
 const MainBoard = () => {
-
     // debug visual for calculations behind the scenes
     const [ debugInput, setDebugInput ] = useState("");
     // visual for users
     const [ screenView, setScreenView ] = useState("0");
-
+    // check if an operator has already been clicked
     const [ operatorQueue, setOperatorQueue ] = useState(false);
 
     const checkIfOperator = (input) => {
@@ -24,26 +23,6 @@ const MainBoard = () => {
             setOperatorQueue(false);
             return false;
         }
-    }
-
-    const clickAC = () => {
-        setScreenView("0");
-        setDebugInput("");
-    }
-
-    const clickPlusMinus = () => {
-        // if number is already on the board
-          // if number is positive
-            // turn it negative
-          // if number is negative
-            // turn it positive
-        // else
-          // the following number will be negative
-    }
-
-    const clickPercent = () => {
-        // reference number on screenView
-        // convert number into number percentage out of 100
     }
 
     const clickButton = (e) => {
@@ -65,6 +44,26 @@ const MainBoard = () => {
         }
         
         setDebugInput(debugInput + integerInput)
+    }
+
+    const clickAC = () => {
+        setScreenView("0");
+        setDebugInput("");
+    }
+
+    const clickPlusMinus = () => {
+        // if number is already on the board
+          // if number is positive
+            // turn it negative
+          // if number is negative
+            // turn it positive
+        // if board is at default state ("0")
+          // add "-" to setState
+    }
+
+    const clickPercent = () => {
+        // reference number on screenView
+        // convert number into number percentage out of 100
     }
 
     const clickEquals = () => {
