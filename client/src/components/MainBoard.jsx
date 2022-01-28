@@ -68,12 +68,7 @@ const MainBoard = () => {
     }
 
     const clickEquals = () => {
-
-        const fullInput = screenView;
-        // const splitInput = fullInput.split(/\s/g);
-        const splitInput = fullInput.split("");
         const result = eval(debugInput);
-        // console.log('splitInput: ', splitInput);
 
         setDebugInput(result);
         setScreenView(result);
@@ -81,28 +76,34 @@ const MainBoard = () => {
 
     return (
         <div>
-            <div>
-                <InputScreen screenInput={screenView} />
+            <div className="fullBoard">
+                <div className="horizontalRows">
+                    <div className="inputScreen">
+                        <InputScreen screenInput={screenView} />
+                    </div>
+                    <div className="nonInteger">
+                        <NonInteger 
+                        clickButton={clickButton}
+                        clickAC={clickAC} 
+                        />
+                    </div>
+                    <div className="numRows">
+                        <NumRowOne clickButton={clickButton} />
+                        <NumRowTwo clickButton={clickButton} />
+                        <NumRowThree clickButton={clickButton} />
+                        <NumRowFour clickButton={clickButton} />
+                    </div>
+                </div>
+                <div className="verticalRows">
+                    <div className="operatorRows">
+                        <Arithmetic 
+                        clickButton={clickButton}
+                        clickEquals={clickEquals} 
+                        />
+                    </div>
+                </div>
             </div>
-            <div className="nonInteger">
-                <NonInteger 
-                clickButton={clickButton}
-                clickAC={clickAC} 
-                />
-            </div>
-            <div className="numRows">
-                <NumRowOne clickButton={clickButton} />
-                <NumRowTwo clickButton={clickButton} />
-                <NumRowThree clickButton={clickButton} />
-                <NumRowFour clickButton={clickButton} />
-            </div>
-            <div className="operatorRows">
-                <Arithmetic 
-                clickButton={clickButton}
-                clickEquals={clickEquals} 
-                />
-            </div>
-            <div>
+            <div className="debugInput">
                 <h3>Debug Input</h3>
                 <p>{debugInput}</p>    
             </div>
