@@ -3,3 +3,17 @@
     flex-direction: row;
     justify-content: center;
 }
+
+.allClear, .integer, .percentage {
+    margin: 10px;
+    padding: 6px;
+    border-style: solid;
+    font-size: 30px;
+}
+
+.divide, .multiply, .subtract, .addition, .equals {
+    margin: 10px;
+    padding: 8px;
+    border-style: solid;
+    font-size: 36px;
+}

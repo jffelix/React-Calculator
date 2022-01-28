@@ -1,8 +1,7 @@
 import React from "react";
+import "./operators.css";
 
 const Arithmetic = (props) => {
-
-    // equals will need a different onClick function
 
     return (
         <div>

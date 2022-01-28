@@ -11,5 +11,8 @@
 }
 
 .numOne, .numTwo, .numThree, .numFour, .numFive, .numSix, .numSeven, .numEight, .numNine, .numZero, .decimal {
+    margin: 10px;
     padding: 10px;
+    border-style: solid;
+    font-size: 36px;
 }

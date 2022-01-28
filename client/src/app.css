@@ -18,4 +18,6 @@ body {
 
 .inputScreen {
     padding: 20px;
+    border-style: solid;
+    font-size: 42px;
 }
