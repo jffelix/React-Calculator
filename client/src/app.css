@@ -8,6 +8,8 @@ body {
 
 .app h1 {
     color: white;
+    margin: 50px 0;
+    font-size: 40px;
 }
 
 .fullBoard {
@@ -24,8 +26,10 @@ body {
 
 .inputScreen {
     padding: 20px;
+    margin-bottom: 4px;
     border-style: solid;
     font-size: 42px;
     text-align: right;
-    background-color: white;
+    color: white;
+    background-color: black;
 }
