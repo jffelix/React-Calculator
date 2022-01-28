@@ -25,6 +25,18 @@ const MainBoard = () => {
         }
     }
 
+    const checkFullEquation = () => {
+        const splitStr = debugInput.split("");
+        console.log('splitStr: ', splitStr);
+        for (var i = 0; i < splitStr.length; i++) {
+            if (checkIfOperator(splitStr[i])) {
+                console.log("operator in between: ", splitStr[i]);
+                return true;
+            }
+        }
+        return false;
+    }
+
     const clickButton = (e) => {
         const integerInput = e.target.innerHTML;
         // if clicked button is an integer
@@ -41,9 +53,26 @@ const MainBoard = () => {
                     setScreenView(screenView + integerInput);
                 }
             }
+            
+            setDebugInput(debugInput + integerInput);
+
+        } else {
+
+        // if clicked button is an operator
+          // if debugInput has number-operator-number order
+            // invoke clickEquals
+
+           if (checkFullEquation()) {
+                const result = eval(debugInput);
+                setDebugInput(result);
+                setScreenView(result);
+           } else {
+                setDebugInput(debugInput + integerInput);
+           }
+           setOperatorQueue(true);
         }
         
-        setDebugInput(debugInput + integerInput)
+        // setDebugInput(debugInput + integerInput);
     }
 
     const clickAC = () => {
@@ -62,8 +91,8 @@ const MainBoard = () => {
     }
 
     const clickPercent = () => {
-        // reference number on screenView
-        // convert number into number percentage out of 100
+        const currentNum = screenView;
+        console.log('currentNum / 100: ', currentNum / 100);
     }
 
     const clickEquals = () => {
@@ -83,7 +112,8 @@ const MainBoard = () => {
                     <div className="nonInteger">
                         <NonInteger 
                         clickButton={clickButton}
-                        clickAC={clickAC} 
+                        clickAC={clickAC}
+                        clickPercent={clickPercent} 
                         />
                     </div>
                     <div className="numRows">

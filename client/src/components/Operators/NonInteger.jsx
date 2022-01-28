@@ -11,7 +11,7 @@ const NonInteger = (props) => {
                 <span>+/-</span>
             </div>
             <div className="percentage">
-                <span>%</span>
+                <span onClick={props.clickPercent}>%</span>
             </div>
         </div>
     )
