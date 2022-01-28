@@ -5,20 +5,20 @@ const Arithmetic = (props) => {
 
     return (
         <div>
-            <div className="divide" onClick={props.clickButton}>
-                <span>/</span>
+            <div className="divide">
+                <span onClick={props.clickButton}>/</span>
             </div>
-            <div className="multiply" onClick={props.clickButton}>
-                <span>*</span>
+            <div className="multiply">
+                <span onClick={props.clickButton}>*</span>
             </div>
-            <div className="subtract" onClick={props.clickButton}>
-                <span>-</span>
+            <div className="subtract">
+                <span onClick={props.clickButton}>-</span>
             </div>
-            <div className="addition" onClick={props.clickButton}>
-                <span>+</span>
+            <div className="addition">
+                <span onClick={props.clickButton}>+</span>
             </div>
-            <div className="equals" onClick={props.clickEquals}>
-                <span>=</span>
+            <div className="equals">
+                <span onClick={props.clickEquals}>=</span>
             </div>
         </div>
     )
