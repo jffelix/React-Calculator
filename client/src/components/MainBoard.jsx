@@ -31,6 +31,13 @@ const MainBoard = () => {
         setDebugInput("");
     }
 
+    const clickPlusMinus = () => {
+        // if number is positive
+          // turn it negative
+        // if number is negative
+          // turn it positive
+    }
+
     const clickButton = (e) => {
         const integerInput = e.target.innerHTML;
         // if clicked button is an integer
@@ -67,10 +74,6 @@ const MainBoard = () => {
     return (
         <div>
             <div>
-                <h3>Debug Input</h3>
-                <p>{debugInput}</p>    
-            </div>
-            <div>
                 <InputScreen screenInput={screenView} />
             </div>
             <div className="numRows">
@@ -86,6 +89,10 @@ const MainBoard = () => {
                 <NonInteger 
                 clickButton={clickButton}
                 clickAC={clickAC} />
+            </div>
+            <div>
+                <h3>Debug Input</h3>
+                <p>{debugInput}</p>    
             </div>
         </div>
     )
