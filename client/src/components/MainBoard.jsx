@@ -13,24 +13,32 @@ const MainBoard = () => {
     const [ debugInput, setDebugInput ] = useState("");
     // visual for users
     const [ screenView, setScreenView ] = useState("");
-    
+
     const [ operatorQueue, setOperatorQueue ] = useState(false);
+
+    const checkIfOperator = (input) => {
+        if (input === "/" || input === "*" || input === "-" || input === "+") {
+            setOperatorQueue(true);
+            return true;
+        } else {
+            setOperatorQueue(false);
+            return false;
+        }
+    }
 
     const clickButton = (e) => {
         const integerInput = e.target.innerHTML;
 
         // if clicked button is an operator
-        if (integerInput === "/" || integerInput === "*" || integerInput === "-" || integerInput === "+") {
+        if (!checkIfOperator(integerInput)) {
+            
+            if (setOperatorQueue) {
+                setScreenView(integerInput);
+                setOperatorQueue(false);
 
-            // if another operator is pressed
-              // replace previous operator with current one
-            // if another number is pressed
-              // invoke clickEquals
-
-            console.log("operator clicked");
-
-        } else {
-            setScreenView(screenView + integerInput);
+            } else {
+                setScreenView(screenView + integerInput);
+            }
         }
         
         setDebugInput(debugInput + integerInput)
@@ -75,3 +83,21 @@ const MainBoard = () => {
 }
 
 export default MainBoard;
+
+
+
+// BACKUP CODE
+
+        // // if clicked button is an operator
+        // if (integerInput === "/" || integerInput === "*" || integerInput === "-" || integerInput === "+") {
+
+        //     // if another operator is pressed
+        //       // replace previous operator with current one
+        //     // if another number is pressed
+        //       // invoke clickEquals
+
+        //     console.log("operator clicked");
+
+        // } else {
+        //     setScreenView(screenView + integerInput);
+        // }
