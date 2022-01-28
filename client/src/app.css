@@ -2,12 +2,12 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    /* background-color: black; */
+    background-color: black;
 }
 
-/* .app h1 {
+.app h1 {
     color: white;
-} */
+}
 
 .fullBoard {
     display: flex;
@@ -26,4 +26,5 @@ body {
     border-style: solid;
     font-size: 42px;
     text-align: right;
+    background-color: white;
 }

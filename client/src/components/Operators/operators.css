@@ -9,6 +9,7 @@
     padding: 6px;
     border-style: solid;
     font-size: 30px;
+    background-color: white;
 }
 
 .divide, .multiply, .subtract, .addition, .equals {
@@ -16,4 +17,5 @@
     padding: 8px;
     border-style: solid;
     font-size: 36px;
+    background-color: white;
 }

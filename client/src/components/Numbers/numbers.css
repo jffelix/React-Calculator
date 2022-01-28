@@ -15,6 +15,7 @@
     padding: 10px;
     border-style: solid;
     font-size: 36px;
+    background-color: white;
 }
 
 .numZero {
@@ -25,4 +26,9 @@
     padding-bottom: 10px;
     border-style: solid;
     font-size: 36px;
+    background-color: white;
+}
+
+.debugInput {
+    background-color: white;
 }
