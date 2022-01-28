@@ -26,15 +26,18 @@ const MainBoard = () => {
     }
 
     const checkFullEquation = () => {
-        const splitStr = debugInput.split("");
-        console.log('splitStr: ', splitStr);
-        for (var i = 0; i < splitStr.length; i++) {
-            if (checkIfOperator(splitStr[i])) {
-                console.log("operator in between: ", splitStr[i]);
-                return true;
+        // cannot split string unless length is over 1
+        if (debugInput.length > 1) {
+            const splitStr = debugInput.split("");
+    
+            for (var i = 0; i < splitStr.length; i++) {
+                if (checkIfOperator(splitStr[i])) {
+                    return true;
+                }
             }
+            return false;
         }
-        return false;
+  
     }
 
     const clickButton = (e) => {
@@ -53,23 +56,22 @@ const MainBoard = () => {
                     setScreenView(screenView + integerInput);
                 }
             }
-            
             setDebugInput(debugInput + integerInput);
 
-        } else {
-
         // if clicked button is an operator
-          // if debugInput has number-operator-number order
-            // invoke clickEquals
-
-           if (checkFullEquation()) {
+        } else {
+            // if debugInput has number-operator-number order
+            if (checkFullEquation()) {
+                // convert equation to result
                 const result = eval(debugInput);
-                setDebugInput(result);
+                // concat input to result
+                setDebugInput(result + integerInput);
                 setScreenView(result);
-           } else {
+            } else {
                 setDebugInput(debugInput + integerInput);
-           }
-           setOperatorQueue(true);
+            }
+        
+            setOperatorQueue(true);
         }
         
         // setDebugInput(debugInput + integerInput);
