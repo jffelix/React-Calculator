@@ -46,6 +46,10 @@ const MainBoard = () => {
 
     const clickButton = (e) => {
         const integerInput = e.target.innerHTML;
+        // error handling for multiple zeros (ex: "009");
+        if (debugInput === "" && integerInput === "0") {
+            return;
+        }
         // if clicked button is an integer
         if (!checkIfOperator(integerInput)) {
             // if an operator came before the integer
