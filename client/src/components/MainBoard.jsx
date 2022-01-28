@@ -28,14 +28,12 @@ const MainBoard = () => {
 
     const clickButton = (e) => {
         const integerInput = e.target.innerHTML;
-
-        // if clicked button is an operator
+        // if clicked button is an integer
         if (!checkIfOperator(integerInput)) {
-            
-            if (setOperatorQueue) {
+            // if an operator came before the integer
+            if (operatorQueue) {
                 setScreenView(integerInput);
-                setOperatorQueue(false);
-
+            // if an integer came before the integer
             } else {
                 setScreenView(screenView + integerInput);
             }
