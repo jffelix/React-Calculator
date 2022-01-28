@@ -84,6 +84,12 @@ const MainBoard = () => {
             <div>
                 <InputScreen screenInput={screenView} />
             </div>
+            <div className="nonInteger">
+                <NonInteger 
+                clickButton={clickButton}
+                clickAC={clickAC} 
+                />
+            </div>
             <div className="numRows">
                 <NumRowOne clickButton={clickButton} />
                 <NumRowTwo clickButton={clickButton} />
@@ -93,10 +99,8 @@ const MainBoard = () => {
             <div className="operatorRows">
                 <Arithmetic 
                 clickButton={clickButton}
-                clickEquals={clickEquals} />
-                <NonInteger 
-                clickButton={clickButton}
-                clickAC={clickAC} />
+                clickEquals={clickEquals} 
+                />
             </div>
             <div>
                 <h3>Debug Input</h3>
