@@ -2,7 +2,12 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
+    /* background-color: black; */
 }
+
+/* .app h1 {
+    color: white;
+} */
 
 .fullBoard {
     display: flex;
