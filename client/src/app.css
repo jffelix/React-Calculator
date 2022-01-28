@@ -3,6 +3,7 @@ body {
     justify-content: center;
     text-align: center;
     background-color: black;
+    font-family: 'Roboto', sans-serif;
 }
 
 .app h1 {
