@@ -32,10 +32,18 @@ const MainBoard = () => {
     }
 
     const clickPlusMinus = () => {
-        // if number is positive
-          // turn it negative
-        // if number is negative
-          // turn it positive
+        // if number is already on the board
+          // if number is positive
+            // turn it negative
+          // if number is negative
+            // turn it positive
+        // else
+          // the following number will be negative
+    }
+
+    const clickPercent = () => {
+        // reference number on screenView
+        // convert number into number percentage out of 100
     }
 
     const clickButton = (e) => {
