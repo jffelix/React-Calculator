@@ -4,7 +4,7 @@ import "./operators.css";
 const NonInteger = (props) => {
 
     return (
-        <div className="non-integer">
+        <div className="nonIntegerRow">
             <div className="allClear">
                 <span onClick={props.clickAC}>AC</span>
             </div>

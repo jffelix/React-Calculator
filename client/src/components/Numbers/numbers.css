@@ -1,10 +1,11 @@
 .numRows {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
 }
 
 .rowOne, .rowTwo, .rowThree, .rowFour {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
