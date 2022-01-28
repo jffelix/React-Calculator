@@ -10,9 +10,19 @@
     justify-content: center;
 }
 
-.numOne, .numTwo, .numThree, .numFour, .numFive, .numSix, .numSeven, .numEight, .numNine, .numZero, .decimal {
+.numOne, .numTwo, .numThree, .numFour, .numFive, .numSix, .numSeven, .numEight, .numNine, .decimal {
     margin: 10px;
     padding: 10px;
+    border-style: solid;
+    font-size: 36px;
+}
+
+.numZero {
+    margin: 10px;
+    padding-right: 80px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-style: solid;
     font-size: 36px;
 }
