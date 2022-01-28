@@ -15,6 +15,8 @@ const MainBoard = () => {
     // check if an operator has already been clicked
     const [ operatorQueue, setOperatorQueue ] = useState(false);
 
+    const [ seperator, setSeperator ] = useState("");
+
     const checkIfOperator = (input) => {
         if (input === "/" || input === "*" || input === "-" || input === "+") {
             setOperatorQueue(true);
@@ -32,6 +34,7 @@ const MainBoard = () => {
     
             for (var i = 0; i < splitStr.length; i++) {
                 if (checkIfOperator(splitStr[i])) {
+                    setSeperator(splitStr[i]);
                     return true;
                 }
             }
@@ -94,7 +97,10 @@ const MainBoard = () => {
 
     const clickPercent = () => {
         const currentNum = screenView;
-        console.log('currentNum / 100: ', currentNum / 100);
+        const percentage = currentNum / 100;
+        
+        setScreenView(percentage);
+        setDebugInput(percentage);
     }
 
     const clickEquals = () => {
