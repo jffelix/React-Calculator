@@ -16,7 +16,7 @@ const MainBoard = () => {
     // check if an operator has already been clicked
     const [ operatorQueue, setOperatorQueue ] = useState(false);
 
-    // const [ seperator, setSeperator ] = useState("");
+    const [ debugShow, setDebugShow ] = useState(false);
 
     const checkIfOperator = (input) => {
         if (input === "/" || input === "*" || input === "-" || input === "+") {
@@ -122,6 +122,10 @@ const MainBoard = () => {
         setScreenView(result);
     }
 
+    const toggleDebugView = () => {
+        setDebugShow(debugShow => !debugShow);
+    }
+
     return (
         <div>
             <div className="inputScreen">
@@ -153,9 +157,11 @@ const MainBoard = () => {
                     </div>
                 </div>
             </div>
-            <div className="debugInput">
-                <h3>Debug Input</h3>
-                <p>{debugInput}</p>    
+            <div className="debugInput" onClick={toggleDebugView}>
+                <h3>Debug Input (click to show)</h3>
+                {
+                    debugShow ? <p>{debugInput}</p> : null   
+                }
             </div>
         </div>
     )
