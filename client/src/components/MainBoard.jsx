@@ -124,11 +124,11 @@ const MainBoard = () => {
 
     return (
         <div>
+            <div className="inputScreen">
+                <InputScreen screenInput={screenView} />
+            </div>
             <div className="fullBoard">
                 <div className="horizontalRows">
-                    <div className="inputScreen">
-                        <InputScreen screenInput={screenView} />
-                    </div>
                     <div className="nonInteger">
                         <NonInteger 
                         clickButton={clickButton}

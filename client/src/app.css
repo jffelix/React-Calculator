@@ -3,3 +3,19 @@ body {
     justify-content: center;
     text-align: center;
 }
+
+.fullBoard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.verticalRows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inputScreen {
+    padding: 20px;
+}
