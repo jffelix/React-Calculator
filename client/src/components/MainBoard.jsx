@@ -15,7 +15,7 @@ const MainBoard = () => {
     // check if an operator has already been clicked
     const [ operatorQueue, setOperatorQueue ] = useState(false);
 
-    const [ seperator, setSeperator ] = useState("");
+    // const [ seperator, setSeperator ] = useState("");
 
     const checkIfOperator = (input) => {
         if (input === "/" || input === "*" || input === "-" || input === "+") {
@@ -34,7 +34,7 @@ const MainBoard = () => {
     
             for (var i = 0; i < splitStr.length; i++) {
                 if (checkIfOperator(splitStr[i])) {
-                    setSeperator(splitStr[i]);
+                    // setSeperator(splitStr[i]);
                     return true;
                 }
             }
@@ -76,7 +76,6 @@ const MainBoard = () => {
         
             setOperatorQueue(true);
         }
-        
         // setDebugInput(debugInput + integerInput);
     }
 
@@ -87,12 +86,24 @@ const MainBoard = () => {
 
     const clickPlusMinus = () => {
         // if number is already on the board
-          // if number is positive
-            // turn it negative
-          // if number is negative
-            // turn it positive
+        if (debugInput.length > 0) {
+            const convertToNum = parseInt(debugInput);
+            // if number is positive
+            if (convertToNum > 0) {
+                const toNegative = -Math.abs(convertToNum);
+                setScreenView(toNegative.toString());
+                setDebugInput(toNegative.toString());
+            // if number is negative
+            } else if (convertToNum < 0) {
+                const toPositive = Math.abs(convertToNum);
+                setScreenView(toPositive.toString());
+                setDebugInput(toPositive.toString());
+            }
         // if board is at default state ("0")
-          // add "-" to setState
+        } else if (debugInput.length === 0) {
+            setScreenView("-");
+            setDebugInput("-");
+        }
     }
 
     const clickPercent = () => {
@@ -121,6 +132,7 @@ const MainBoard = () => {
                         <NonInteger 
                         clickButton={clickButton}
                         clickAC={clickAC}
+                        clickPlusMinus={clickPlusMinus}
                         clickPercent={clickPercent} 
                         />
                     </div>

@@ -8,7 +8,7 @@ const NonInteger = (props) => {
                 <span onClick={props.clickAC}>AC</span>
             </div>
             <div className="integer">
-                <span>+/-</span>
+                <span onClick={props.clickPlusMinus}>+/-</span>
             </div>
             <div className="percentage">
                 <span onClick={props.clickPercent}>%</span>
