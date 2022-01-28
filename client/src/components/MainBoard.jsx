@@ -26,6 +26,11 @@ const MainBoard = () => {
         }
     }
 
+    const clickAC = () => {
+        setScreenView("0");
+        setDebugInput("");
+    }
+
     const clickButton = (e) => {
         const integerInput = e.target.innerHTML;
         // if clicked button is an integer
@@ -35,6 +40,7 @@ const MainBoard = () => {
                 setScreenView(integerInput);
             // if an integer came before the integer
             } else {
+                // if screen is at default state
                 if (screenView === "0") {
                     setScreenView(integerInput);
                 } else {
@@ -77,7 +83,9 @@ const MainBoard = () => {
                 <Arithmetic 
                 clickButton={clickButton}
                 clickEquals={clickEquals} />
-                <NonInteger clickButton={clickButton} />
+                <NonInteger 
+                clickButton={clickButton}
+                clickAC={clickAC} />
             </div>
         </div>
     )

@@ -5,7 +5,7 @@ const NonInteger = (props) => {
     return (
         <div>
             <div className="allClear">
-                <span>AC</span>
+                <span onClick={props.clickAC}>AC</span>
             </div>
             <div className="integer">
                 <span>+/-</span>
