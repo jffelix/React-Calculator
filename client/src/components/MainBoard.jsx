@@ -12,7 +12,7 @@ const MainBoard = () => {
     // debug visual for calculations behind the scenes
     const [ debugInput, setDebugInput ] = useState("");
     // visual for users
-    const [ screenView, setScreenView ] = useState("");
+    const [ screenView, setScreenView ] = useState("0");
 
     const [ operatorQueue, setOperatorQueue ] = useState(false);
 
@@ -35,7 +35,11 @@ const MainBoard = () => {
                 setScreenView(integerInput);
             // if an integer came before the integer
             } else {
-                setScreenView(screenView + integerInput);
+                if (screenView === "0") {
+                    setScreenView(integerInput);
+                } else {
+                    setScreenView(screenView + integerInput);
+                }
             }
         }
         
