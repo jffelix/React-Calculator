@@ -1,9 +1,10 @@
 import React from "react";
+import "./numbers.css";
 
 const NumRowOne = (props) => {
 
     return (
-        <div>
+        <div className="rowOne">
             <div className="numOne">
                 <span onClick={props.clickButton}>1</span>
             </div>

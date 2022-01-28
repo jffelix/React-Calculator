@@ -6,6 +6,7 @@ import NumRowFour from "./Numbers/NumRowFour.jsx";
 import Arithmetic from "./Operators/Arithmetic.jsx";
 import NonInteger from "./Operators/NonInteger.jsx";
 import InputScreen from "./InputScreen.jsx";
+import "./Numbers/numbers.css";
 
 const MainBoard = () => {
     // debug visual for calculations behind the scenes

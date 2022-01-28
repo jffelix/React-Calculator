@@ -1,9 +1,10 @@
 import React from "react";
+import "./operators.css";
 
 const NonInteger = (props) => {
 
     return (
-        <div>
+        <div className="non-integer">
             <div className="allClear">
                 <span onClick={props.clickAC}>AC</span>
             </div>
