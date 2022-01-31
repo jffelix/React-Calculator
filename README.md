@@ -5,7 +5,7 @@ Hello and welcome to my calculator made with React Hooks! The concept and functi
 
 ## Notable Features
 
-- Will solve basic calculations after click the equal signs.
+- Will solve basic calculations after clicking the equal sign.
 - Will solve calculations without the equals button when additional operators are used (ex: "1+2*" --> "3*5-" --> "15-7" . . .)
 - AC button allows to reset screen to 0.
 - Plus/Minus button changes integer from positive to negative and vice-versa
